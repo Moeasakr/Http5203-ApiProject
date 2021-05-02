@@ -1,0 +1,74 @@
+﻿@model ApiProjectV2.Models.ViewModels.rsp
+
+@{
+    ViewBag.Title = "GetUser";
+}
+
+<h2>GetUser</h2>
+
+<div>
+    <h4>CalendarUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.user.facebookId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.facebookId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.lastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.lastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.dateFormat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.dateFormat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.createDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.createDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.startDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.startDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.use24HourClock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.use24HourClock)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.user.id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,80 @@
+﻿@model ApiProjectV2.Models.MovieDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.fullTitle</h2>
+
+<div>
+    @Html.ActionLink("Add to your calendar", "AddMovieToUserCalendar", "Calendar", new { movieTitle = Model.fullTitle, date = Model.releaseState}, null)
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+
+        </dt>
+        <dd>
+            <img src="@Model.image" style="width:10%; height:10%;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.releaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.releaseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.plot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.plot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.directors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.directors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stars)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stars)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

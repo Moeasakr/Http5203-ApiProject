@@ -1,0 +1,38 @@
+﻿@model ApiProjectV2.Models.UpcomingMovies
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Movie Name
+        </th>
+        <th>
+            Genres
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.items) {
+    <tr>
+        <td>
+            <img src="@item.image" />
+            @Html.ActionLink(item.fullTitle, "Details", new { movieID = item.id, releaseDate = item.releaseState })
+        </td>
+        <td>
+            @foreach (var genreItem in item.genreList)
+            {
+                <span>@genreItem.value | </span>
+            }
+        </td>
+        <td>
+            @item.releaseState
+        </td>
+    </tr>
+}
+
+</table>
